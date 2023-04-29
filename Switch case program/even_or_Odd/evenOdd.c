@@ -1,5 +1,5 @@
 /*
-Developed by ravish KUmar Tiwari
+Developed by ravish KUmar Tiwari on saturday
 */
 #include <stdio.h>
 
