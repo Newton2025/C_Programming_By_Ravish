@@ -1,11 +1,8 @@
 #include <stdio.h>
 void main()
 {
-    quadratic_Equation();
-}
-void quadratic_Equation()
-{
-    int x1, x2, a, b, c;
+    int a, b, c;
+
     printf("Enter a = ");
     scanf("%d", &a);
 
@@ -15,10 +12,17 @@ void quadratic_Equation()
     printf("Enter c = ");
     scanf("%d", &c);
 
-    // this is a update in the application
+    quadratic_Equation(a, b, c);
+}
 
-    x1 = (-b) + (b * b - 4 * a * c);
-    x2 = (-b) - (b * b - 4 * a * c);
+void quadratic_Equation(int a, int b, int c)
+{
+    int x1, x2, discriminant;
 
-    printf("Roots of Equation Are x1 = %  \n  x2 = %d \n", x1, x2);
+    discriminant = b * b - 4 * a * c;
+
+    x1 = (-b) + sqrt(discriminant);
+    x2 = (-b) - sqrt(discriminant);
+
+    printf("Roots of Equation Are x1 = %d  \n  x2 = %d \n", x1, x2);
 }
